@@ -22,3 +22,179 @@ user id is 2
 2022-05-30 12:04:19.434959
 user id is 2
 {'status': 'success', 'message': ''}
+
+2022-05-30 14:59:56.437706
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:01:20.033312
+user id is 2
+please check in first
+
+2022-05-30 15:04:15.480492
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-05-30 15:04:22.615167
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-05-30 15:04:42.850846
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-05-30 15:04:44.056569
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-05-30 15:05:37.726988
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:06:07.029858
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:06:25.041056
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:06:26.455776
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:06:28.261754
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:06:29.952019
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:07:00.219070
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:07:36.568233
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:07:42.034291
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:09:37.423720
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:09:39.222291
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:10:34.023690
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:10:35.378517
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:10:36.291155
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:10:37.297532
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:10:39.414669
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:10:58.606930
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:11:00.002840
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:11:00.417457
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:11:00.922778
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:12:34.399649
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:12:36.452166
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:12:38.229672
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:12:44.752881
+user id is 2
+{'status': 'error', 'message': 'Please use a valid IMEI number.'}
+
+2022-05-30 15:13:13.083477
+user id is 2
+{'status': 'error', 'message': 'You are not authorised to access the application from this device. Please contact your manager.'}
+
+2022-05-30 15:13:26.369668
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:14:14.381474
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:14:15.287655
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:14:16.025341
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:14:16.949429
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:25:55.554592
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:25:57.544119
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:25:58.860440
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:59:25.821144
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 15:59:26.745743
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 16:00:22.385552
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 16:00:31.012184
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 16:02:14.478836
+user id is 2
+{'status': 'success', 'message': ''}

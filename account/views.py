@@ -233,7 +233,6 @@ class UserTblAttendanceView(APIView):
                 except:
                     previous_data = None
                 if previous_data:
-
                     if data["fld_attendance_status"] != "check_out":
                         # print(previous_data.fld_attendance_status)
                         previous_data_lat_lon = (
@@ -242,26 +241,6 @@ class UserTblAttendanceView(APIView):
                             data["fld_latitude"], data["fld_longitude"])
                         attendance_log, created = TblAttendanceLog.objects.get_or_create(
                             user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
-
-                        # check of the "fld_attendance_status"
-                        if data["fld_attendance_status"] == "check_in":
-                            if attendance_log.check_in_time:
-                                response_text_file(
-                                    user=user, value={"status": "error", 'message': messages.get("multiple_checkin")})
-                                return Response({"status": "error", 'message': messages.get("multiple_checkin")}, status=status.HTTP_400_BAD_REQUEST)
-                            attendance_log.check_in_time = data["fld_time"]
-                            attendance_log.save()
-                        if data["fld_attendance_status"] == "current":
-                            if attendance_log.check_in_time == None:
-                                response_text_file(user=user, value={
-                                                   "status": "error", 'message': messages.get("not_checkin_yet")})
-                                return Response({"status": "error", 'message': messages.get("not_checkin_yet")}, status=status.HTTP_400_BAD_REQUEST)
-                        if attendance_log.check_out_time:
-                            response_text_file(user=user, value={
-                                               "status": "error", 'message': messages.get("multiple_checkout")})
-                            return Response({"status": "error", 'message': messages.get("multiple_checkout")}, status=status.HTTP_400_BAD_REQUEST)
-
-                        # end check of "fld_attendance_status"
 
                         distance_calculated = total_distance(
                             [previous_data_lat_lon, current_data_lat_lon])
@@ -294,19 +273,28 @@ class UserTblAttendanceView(APIView):
                     else:
                         attendance_log, created = TblAttendanceLog.objects.get_or_create(
                             user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
-
-                        if attendance_log.check_out_time:
-                            response_text_file(user=user, value={
-                                               "status": "error", 'message': messages.get("multiple_checkout")})
-                            return Response({"status": "error", 'message': messages.get("multiple_checkout")}, status=status.HTTP_400_BAD_REQUEST)
-
                         attendance_log.check_out_time = data["fld_time"]
                         attendance_log.save()
-
                         user_reimbursement, created = TblUserReimbursements.objects.get_or_create(
-                            user_id=request.user, distance=attendance_log.distance, date=data["fld_date"], visit_id=data["visit_id"])
+                            user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
 
+                        user_reimbursement.distance = attendance_log.distance
+                        user_reimbursement.save()
                         print("checkout")
+                else:
+                    if data["fld_attendance_status"] == "check_in":
+                        attendance_log, created = TblAttendanceLog.objects.get_or_create(
+                            user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
+                        attendance_log.check_in_time = data["fld_time"]
+                        attendance_log.save()
+                    else:
+                        response_text_file(
+                            user=user, value={
+                                "status": "error", 'message': "please check in first"})
+                        # print(serializer.errors)
+                        return Response({
+                            "status": "error", 'message': "please check in first"}, status=status.HTTP_400_BAD_REQUEST)
+
                 serializer = TblAttendanceSerializer(
                     data=data)
                 if serializer.is_valid():
@@ -316,9 +304,11 @@ class UserTblAttendanceView(APIView):
                     response_text_file(user=user, value=serializer.errors)
                     # print(serializer.errors)
                     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-            response_text_file(user=user, value={
-                "status": "error", 'message': messages.get("device_information_error")})
-            return Response({"status": "error", 'message': messages.get("device_information_error")}, status=status.HTTP_404_NOT_FOUND)
+
+            else:
+                response_text_file(user=user, value={
+                    "status": "error", 'message': messages.get("device_information_error")})
+                return Response({"status": "error", 'message': messages.get("device_information_error")}, status=status.HTTP_404_NOT_FOUND)
 
         response_text_file(user=user, value={
             "status": "success", 'message': messages.get("data_created")})
