@@ -198,3 +198,215 @@ user id is 2
 2022-05-30 16:02:14.427025
 user id is 2
 [{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'current', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '15:00', 'date': '2022-05-30'}, {'attendance_status': 'check_out', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '19:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:31:09.229654
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'current', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '15:00', 'date': '2022-05-30'}, {'attendance_status': 'check_out', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '19:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:31:12.348535
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'current', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '15:00', 'date': '2022-05-30'}, {'attendance_status': 'check_out', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '19:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:31:13.680747
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'current', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '15:00', 'date': '2022-05-30'}, {'attendance_status': 'check_out', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '19:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:31:34.080379
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'current', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '15:00', 'date': '2022-05-30'}, {'attendance_status': 'check_out', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '8637200433', 'ip_address': '122.163.76.79', 'time': '19:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:31:43.235866
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'current', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '15:00', 'date': '2022-05-30'}, {'attendance_status': 'check_out', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '8637200433', 'ip_address': '122.163.79', 'time': '19:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:31:57.786985
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'current', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.79', 'time': '15:00', 'date': '2022-05-30'}, {'attendance_status': 'check_out', 'latitude': '70.4546456', 'longitude': '85.456456', 'device_model': 'vi', 'imei_number': '8637200433', 'ip_address': '122.163.79', 'time': '19:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:35:34.430901
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:35:36.062528
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:35:48.950804
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:35:52.933290
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:36:02.712968
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:36:04.110308
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:36:05.001624
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:36:05.918556
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:36:18.212479
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:38:12.688768
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:38:13.957343
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:38:15.333078
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:38:16.965012
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:38:17.993356
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:49:25.911958
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:49:28.892186
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:49:30.068548
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:49:30.967918
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:50:54.155529
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.7', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:00.496298
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:02.050470
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:03.365209
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:10.392370
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:18.065641
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:23.274422
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:24.315412
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:28.335403
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:41.467000
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:51:47.061888
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:08.776993
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:11.002340
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:19.743344
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:22.427198
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:23.509213
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.75', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:30.119167
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:31.279203
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:35.809737
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:37.056657
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:42.670563
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163..5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:47.830872
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:49.175648
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:49.875965
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 16:52:59.388397
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 17:37:57.253955
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 17:38:16.521514
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 17:38:19.266686
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 17:38:21.154699
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]

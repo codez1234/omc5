@@ -2,7 +2,6 @@ import ipaddress
 
 
 def validate_ip_address(address=None):
-    return "ok"
     try:
         ip = ipaddress.ip_address(address)
         # print("IP address {} is valid. The object returned is {}".format(address, ip))
