@@ -407,6 +407,7 @@ user id is 2
 user id is 2
 {'status': 'success', 'message': ''}
 
+<<<<<<< HEAD
 2022-05-30 18:30:06.563522
 user id is 2
 {'status': 'success', 'message': 'You have logged in successfully', 'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2NTA3NjA2LCJpYXQiOjE2NTM5MTU2MDYsImp0aSI6IjZmNjUxYzExMjUxZTQ5MGVhNWJhMjEwZGFiZTEwMjE2IiwidXNlcl9pZCI6Mn0.cv0Cd7I13MIQxyLHdbPMZ4uyeEmQ7YU1954RfCNkvWk', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1OTA5OTYwNiwiaWF0IjoxNjUzOTE1NjA2LCJqdGkiOiI2ZjBiY2E3YmM5OWE0YjkzOTcxNDJkMzU1ODE2Y2NhYiIsInVzZXJfaWQiOjJ9.DVGEDKH07geOdGoM_BB9DAaZqt5Xt5m1ZmTd6tQ5WAo'}}
@@ -422,3 +423,84 @@ user id is 2
 2022-05-30 18:30:45.114876
 user id is 2
 {'fld_latitude': [ErrorDetail(string='A valid number is required.', code='invalid')]}
+=======
+2022-05-30 23:13:56.400490
+user id is 2
+{'status': 'success', 'message': 'You have logged in successfully', 'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2NTI0NjM2LCJpYXQiOjE2NTM5MzI2MzYsImp0aSI6ImI0ZTgzYWZkMGFmNTRjYTU5ODMxYjJjZGE2YzQ4MWMzIiwidXNlcl9pZCI6Mn0.1US-4MpD_JYFcLMIOZh6Ea4Xr1OYwvv8P93h7j1VUY8', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1OTExNjYzNiwiaWF0IjoxNjUzOTMyNjM2LCJqdGkiOiJiOWQyMzM4NzExNDE0ODBmOTc5MTVjYzMzMDZlNjIyMCIsInVzZXJfaWQiOjJ9.9pSM-zdw3CAZV3DAGLBpMukgiQcDrEeCHM5-1nn0C04'}}
+
+2022-05-30 23:14:47.731423
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-05-30 23:15:16.097291
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-05-30 23:15:46.465065
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:17:53.647195
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:18:41.779464
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:19:58.034978
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:22:14.673799
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:23:04.026266
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:29:30.150437
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-05-30 23:29:51.995891
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-05-30 23:30:13.383012
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:31:36.979162
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:33:33.632685
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:35:14.053932
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:36:03.728110
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:36:57.428636
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:38:58.937175
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:39:47.386203
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 23:42:18.333539
+user id is 2
+{'status': 'success', 'message': ''}
+>>>>>>> 5f2be99516356e4800a43e4ababafad8a2920c46
