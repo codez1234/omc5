@@ -1,0 +1,24 @@
+
+2022-05-30 12:02:29.292097
+user id is 2
+{'status': 'error', 'message': 'You have already checked in for today'}
+
+2022-05-30 12:02:45.751271
+user id is 2
+{'status': 'error', 'message': 'You have already checked in for today'}
+
+2022-05-30 12:02:59.418390
+user id is 2
+{'status': 'error', 'message': 'You have not checked in for today'}
+
+2022-05-30 12:03:18.474928
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 12:03:28.509270
+user id is 2
+{'status': 'error', 'message': 'You have already checked in for today'}
+
+2022-05-30 12:04:19.434959
+user id is 2
+{'status': 'success', 'message': ''}

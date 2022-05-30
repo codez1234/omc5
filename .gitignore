@@ -1,0 +1,12 @@
+venv
+db.sqlite3
+geoData.txt
+test.py
+test2.py
+test3.py
+test4.py
+old_views.py
+attendanceData.txt
+attendanceView.py
+note.txt
+static/
