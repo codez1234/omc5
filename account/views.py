@@ -234,55 +234,48 @@ class UserTblAttendanceView(APIView):
                 except:
                     previous_data = None
                 if previous_data:
-                    if data["fld_attendance_status"] != "check_out":
-                        # print(previous_data.fld_attendance_status)
-                        previous_data_lat_lon = (
-                            previous_data.fld_latitude, previous_data.fld_longitude)
-                        current_data_lat_lon = (
-                            data["fld_latitude"], data["fld_longitude"])
-                        attendance_log, created = TblAttendanceLog.objects.get_or_create(
-                            user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
+                    attendance_log, created = TblAttendanceLog.objects.get_or_create(
+                        user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
+                    previous_data_lat_lon = (
+                        previous_data.fld_latitude, previous_data.fld_longitude)
+                    current_data_lat_lon = (
+                        data["fld_latitude"], data["fld_longitude"])
 
-                        distance_calculated = total_distance(
-                            [previous_data_lat_lon, current_data_lat_lon])
-                        previous_distance = attendance_log.distance
-                        if previous_distance:
-                            attendance_log.distance = previous_distance + distance_calculated
-                        else:
-                            attendance_log.distance = distance_calculated
-                        if is_arrived(current_data_lat_lon, sites_lat_lon) is not None:
-                            value_for_list = is_arrived(
-                                current_data_lat_lon, sites_lat_lon)
-
-                            current_site_position_details = sites_details[value_for_list]
-                            if attendance_log.site_id:
-                                # caution !!
-                                if current_site_position_details[0] not in attendance_log.site_id:
-                                    site_id_set = f'{attendance_log.site_id}, {current_site_position_details[0]}'
-                                    attendance_log.site_id = str(site_id_set)
-                            else:
-                                attendance_log.site_id = current_site_position_details[0]
-                            if attendance_log.site_name:
-                                # caution !!
-                                if current_site_position_details[1] not in attendance_log.site_name:
-                                    site_name_set = f'{attendance_log.site_name}, {current_site_position_details[1]}'
-                                    attendance_log.site_name = str(
-                                        site_name_set)
-                            else:
-                                attendance_log.site_name = current_site_position_details[1]
-                        attendance_log.save()
+                    distance_calculated = total_distance(
+                        [previous_data_lat_lon, current_data_lat_lon])
+                    previous_distance = attendance_log.distance
+                    if previous_distance:
+                        attendance_log.distance = previous_distance + distance_calculated
                     else:
-                        attendance_log, created = TblAttendanceLog.objects.get_or_create(
-                            user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
+                        attendance_log.distance = distance_calculated
+                    if data["fld_attendance_status"] == "check_out":
                         attendance_log.check_out_time = data["fld_time"]
-                        attendance_log.save()
+                        # attendance_log.save()
                         user_reimbursement, created = TblUserReimbursements.objects.get_or_create(
                             user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
-
                         user_reimbursement.distance = attendance_log.distance
                         user_reimbursement.save()
-                        print("checkout")
+                    if is_arrived(current_data_lat_lon, sites_lat_lon) is not None:
+                        value_for_list = is_arrived(
+                            current_data_lat_lon, sites_lat_lon)
+                        current_site_position_details = sites_details[value_for_list]
+                        if attendance_log.site_id:
+                            # caution !!
+                            if current_site_position_details[0] not in attendance_log.site_id:
+                                site_id_set = f'{attendance_log.site_id}, {current_site_position_details[0]}'
+                                attendance_log.site_id = str(site_id_set)
+                        else:
+                            attendance_log.site_id = current_site_position_details[0]
+                        if attendance_log.site_name:
+                            # caution !!
+                            if current_site_position_details[1] not in attendance_log.site_name:
+                                site_name_set = f'{attendance_log.site_name}, {current_site_position_details[1]}'
+                                attendance_log.site_name = str(
+                                    site_name_set)
+                        else:
+                            attendance_log.site_name = current_site_position_details[1]
 
+                    attendance_log.save()
                 else:
                     if data["fld_attendance_status"] == "check_in":
                         attendance_log, created = TblAttendanceLog.objects.get_or_create(
