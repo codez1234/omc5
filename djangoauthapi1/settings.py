@@ -80,26 +80,26 @@ WSGI_APPLICATION = 'djangoauthapi1.wsgi.application'
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'OPTIONS': {
-#             'sql_mode': 'traditional',
-#         },
-#         'NAME': 'omc_test',
-#         'USER': 'omc',
-#         'PASSWORD': 'Test1234567$$',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        },
+        'NAME': 'omc_test',
+        'USER': 'omc',
+        'PASSWORD': 'Test1234567$$',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 # JWT Configuration
 REST_FRAMEWORK = {
