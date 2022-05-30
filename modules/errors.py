@@ -1,6 +1,7 @@
 messages = {
     "ip_error": "",
     "data_created": "",
+    "check_in_first": "please check in first",
     "not_checkin_yet": "You have not checked in for today",
     "multiple_checkout": "You have already checked out for today",
     "multiple_checkin": "You have already checked in for today",

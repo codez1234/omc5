@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from email import message
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from rest_framework import status
@@ -281,6 +282,7 @@ class UserTblAttendanceView(APIView):
                         user_reimbursement.distance = attendance_log.distance
                         user_reimbursement.save()
                         print("checkout")
+
                 else:
                     if data["fld_attendance_status"] == "check_in":
                         attendance_log, created = TblAttendanceLog.objects.get_or_create(
@@ -290,10 +292,10 @@ class UserTblAttendanceView(APIView):
                     else:
                         response_text_file(
                             user=user, value={
-                                "status": "error", 'message': "please check in first"})
+                                "status": "error", 'message': messages.get("check_in_first")})
                         # print(serializer.errors)
                         return Response({
-                            "status": "error", 'message': "please check in first"}, status=status.HTTP_400_BAD_REQUEST)
+                            "status": "error", 'message': messages.get("check_in_first")}, status=status.HTTP_400_BAD_REQUEST)
 
                 serializer = TblAttendanceSerializer(
                     data=data)
