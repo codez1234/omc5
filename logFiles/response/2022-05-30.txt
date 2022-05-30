@@ -406,3 +406,19 @@ user id is 2
 2022-05-30 17:38:21.175667
 user id is 2
 {'status': 'success', 'message': ''}
+
+2022-05-30 18:30:06.563522
+user id is 2
+{'status': 'success', 'message': 'You have logged in successfully', 'data': {'access_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2NTA3NjA2LCJpYXQiOjE2NTM5MTU2MDYsImp0aSI6IjZmNjUxYzExMjUxZTQ5MGVhNWJhMjEwZGFiZTEwMjE2IiwidXNlcl9pZCI6Mn0.cv0Cd7I13MIQxyLHdbPMZ4uyeEmQ7YU1954RfCNkvWk', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1OTA5OTYwNiwiaWF0IjoxNjUzOTE1NjA2LCJqdGkiOiI2ZjBiY2E3YmM5OWE0YjkzOTcxNDJkMzU1ODE2Y2NhYiIsInVzZXJfaWQiOjJ9.DVGEDKH07geOdGoM_BB9DAaZqt5Xt5m1ZmTd6tQ5WAo'}}
+
+2022-05-30 18:30:15.375422
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-05-30 18:30:28.770260
+user id is 2
+{'fld_latitude': [ErrorDetail(string='This field may not be null.', code='null')]}
+
+2022-05-30 18:30:45.114876
+user id is 2
+{'fld_latitude': [ErrorDetail(string='A valid number is required.', code='invalid')]}

@@ -410,3 +410,19 @@ user id is 2
 2022-05-30 17:38:21.154699
 user id is 2
 [{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 18:30:06.455292
+user id is None
+{'email_or_phone': 'skmd@gmail.com', 'password': 'Skmd@9055', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '2409:4060:296:1601:be50:74d5:9b07:9861'}
+
+2022-05-30 18:30:15.312360
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 18:30:28.752746
+user id is 2
+[{'attendance_status': 'check_in', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
+
+2022-05-30 18:30:45.097153
+user id is 2
+[{'attendance_status': 'check_in', 'latitude': '', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '14:00', 'date': '2022-05-30'}, {'attendance_status': 'check_in', 'latitude': '72.4546456', 'longitude': '85.456456', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '122.163.7.5', 'time': '14:00', 'date': '2022-05-30'}]
