@@ -1,0 +1,12 @@
+
+2022-05-31 10:48:13.510274
+user id is None
+{'email_or_phone': 'skmd@gmail.com', 'password': 'Skmd@9055', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '2409:4060:296:1601:be50:74d5:9b07:9861'}
+
+2022-05-31 10:48:20.430852
+user id is None
+{'email_or_phone': 'skmd@gmail.com', 'password': 'Skmd@9055', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '2'}
+
+2022-05-31 10:48:23.415961
+user id is None
+{'email_or_phone': 'skmd@gmail.com', 'password': 'Skmd@9055', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '2'}
