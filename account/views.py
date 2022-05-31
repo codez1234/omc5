@@ -191,7 +191,12 @@ class UserTblAttendanceView(APIView):
             sites = TblUserSites.objects.filter(
                 fld_user_id=user).last().fld_sites.all()
         except:
-            sites = None
+            print(request.headers)
+            response_text_file(
+                user=user, value={
+                    "status": "error", 'message': messages.get("site_not_assined_yet")})
+            return Response({
+                            "status": "error", 'message': messages.get("site_not_assined_yet")}, status=status.HTTP_404_NOT_FOUND)
         sites_lat_lon = []
         sites_details = []
         for i in sites:
