@@ -191,7 +191,8 @@ class UserTblAttendanceView(APIView):
             sites = TblUserSites.objects.filter(
                 fld_user_id=user).last().fld_sites.all()
         except:
-            print(request.headers)
+            # sites = None
+            # print(request.headers)
             response_text_file(
                 user=user, value={
                     "status": "error", 'message': messages.get("site_not_assined_yet")})
