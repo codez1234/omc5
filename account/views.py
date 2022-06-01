@@ -6,7 +6,7 @@ from rest_framework import status
 from rest_framework.views import APIView
 
 from account.models import User
-from database.models import TblUserDevices, TblUserSites, TblAttendanceLog
+from database.models import TblUserDevices, TblUserSites, TblAttendanceLog, TblAttendanceLog2
 
 from account.phone_number_validation import check_phone_number
 from account.serializers import *
@@ -169,7 +169,7 @@ class AttendanceLogView(APIView):
         #         user_id=request.user, date=date_now())
         # except:
         #     obj = None
-        obj = TblAttendanceLog.objects.filter(
+        obj = TblAttendanceLog2.objects.filter(
             user_id=request.user, date=request.data.get("date"))
         serializer = TblAttendanceLogSerializer(obj, many=True)
         response_text_file(user=request.user.id, value={
@@ -199,17 +199,17 @@ class UserTblAttendanceView(APIView):
             return Response({
                             "status": "error", 'message': messages.get("site_not_assined_yet")}, status=status.HTTP_404_NOT_FOUND)
         sites_lat_lon = []
-        sites_details = []
+        sites_details = []  # site object
         for i in sites:
             sites_lat_lon.append(
                                 (i.fld_latitude, i.fld_longitude))
-            sites_details.append(
-                                (i.fld_site_omc_id, i.fld_site_name))
+            sites_details.append(i)  # site object
             # print((i.fld_latitude, i.fld_longitude))
+
+        print(f'sites_details == {sites_details}')
 
         for value in values:
             ip_address = value.get('ip_address')
-
             if validate_ip_address(ip_address) is None:
                 response_text_file(
                     user=user, value={"status": "error", 'message': messages.get("ip_error")})
@@ -232,62 +232,99 @@ class UserTblAttendanceView(APIView):
                 data["fld_time"] = value.get("time")
                 data["fld_user_id"] = user
                 data["fld_ip_address"] = ip_address
-                data["visit_id"] = f'{user}_{value.get("date")}'
+                data["visit_id"] = f'OMCVISIT_{value.get("date")}_{user}'
                 # print(data["fld_time"])
+                current_data_lat_lon = (
+                    data["fld_latitude"], data["fld_longitude"])
                 try:
                     previous_data = TblAttendance.objects.filter(
                         fld_user_id=user, fld_date=data["fld_date"]).last()
                 except:
                     previous_data = None
                 if previous_data:
-                    attendance_log, created = TblAttendanceLog.objects.get_or_create(
-                        user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
+                    print(f'previous_data is available')
+                    # attendance_log, created = TblAttendanceLog.objects.get_or_create(
+                    #     user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
                     previous_data_lat_lon = (
                         previous_data.fld_latitude, previous_data.fld_longitude)
-                    current_data_lat_lon = (
-                        data["fld_latitude"], data["fld_longitude"])
+                    # current_data_lat_lon = (
+                    #     data["fld_latitude"], data["fld_longitude"])
+                    serializer = TblAttendanceSerializer(
+                        data=data)
+                    if serializer.is_valid():
+                        serializer.save()
+                    else:
+                        response_text_file(user=user, value=serializer.errors)
+                        # print(serializer.errors)
+                        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+                    user_reimbursement, created = TblUserReimbursements.objects.get_or_create(
+                        user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
                     distance_calculated = total_distance(
                         [previous_data_lat_lon, current_data_lat_lon])
-                    previous_distance = attendance_log.distance
-                    if previous_distance:
-                        attendance_log.distance = previous_distance + distance_calculated
-                    else:
-                        attendance_log.distance = distance_calculated
-                    if data["fld_attendance_status"] == "check_out":
-                        attendance_log.check_out_time = data["fld_time"]
-                        # attendance_log.save()
-                        user_reimbursement, created = TblUserReimbursements.objects.get_or_create(
-                            user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
-                        user_reimbursement.distance = attendance_log.distance
-                        user_reimbursement.save()
+                    # previous_distance = user_reimbursement.distance
+                    # user_reimbursement.distance = previous_distance + distance_calculated
+                    user_reimbursement.distance += distance_calculated
+                    user_reimbursement.save()
                     if is_arrived(current_data_lat_lon, sites_lat_lon) is not None:
                         value_for_list = is_arrived(
-                            current_data_lat_lon, sites_lat_lon)
-                        current_site_position_details = sites_details[value_for_list]
-                        if attendance_log.site_id:
-                            # caution !!
-                            if current_site_position_details[0] not in attendance_log.site_id:
-                                site_id_set = f'{attendance_log.site_id}, {current_site_position_details[0]}'
-                                attendance_log.site_id = str(site_id_set)
-                        else:
-                            attendance_log.site_id = current_site_position_details[0]
-                        if attendance_log.site_name:
-                            # caution !!
-                            if current_site_position_details[1] not in attendance_log.site_name:
-                                site_name_set = f'{attendance_log.site_name}, {current_site_position_details[1]}'
-                                attendance_log.site_name = str(
-                                    site_name_set)
-                        else:
-                            attendance_log.site_name = current_site_position_details[1]
+                            current_data_lat_lon, sites_lat_lon)  # return just index position.
+                        # caution point :-site_id = sites_details[value_for_list]
+                        # be sure to verify
+                        print(f'value_for_list == {value_for_list}')
 
-                    attendance_log.save()
+                        user_attendence_log, created = TblAttendanceLog2.objects.get_or_create(
+                            user_id=request.user, site_id=sites_details[value_for_list], date=data["fld_date"], visit_id=data["visit_id"])
+
+                        if user_attendence_log.start_latitude:
+                            user_attendence_log.end_latitude = data["fld_latitude"]
+                            user_attendence_log.end_longitude = data["fld_longitude"]
+                            user_attendence_log.end_time = data["fld_time"]
+                            user_attendence_log.save()
+
+                        else:
+                            user_attendence_log.start_latitude = data["fld_latitude"]
+                            user_attendence_log.start_longitude = data["fld_longitude"]
+                            user_attendence_log.start_time = data["fld_time"]
+                            user_attendence_log.end_latitude = data["fld_latitude"]
+                            user_attendence_log.end_longitude = data["fld_longitude"]
+                            user_attendence_log.end_time = data["fld_time"]
+                            user_attendence_log.save()
+
+                        """
+                            start_latitude=data["fld_latitude"], start_longitude=data["fld_longitude"], end_latitude=data["fld_latitude"], end_longitude=data["fld_longitude"],start_time=data["fld_time"], end_time=data["fld_time"],
+                        """
                 else:
                     if data["fld_attendance_status"] == "check_in":
-                        attendance_log, created = TblAttendanceLog.objects.get_or_create(
-                            user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
-                        attendance_log.check_in_time = data["fld_time"]
-                        attendance_log.save()
+                        print(f'previous_data is not available')
+                        serializer = TblAttendanceSerializer(
+                            data=data)
+                        if serializer.is_valid():
+                            serializer.save()
+                            user_reimbursement, created = TblUserReimbursements.objects.get_or_create(
+                                user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"], distance=0)
+
+                            print(current_data_lat_lon,
+                                  sites_lat_lon, user_reimbursement)
+
+                            if is_arrived(current_data_lat_lon, sites_lat_lon) is not None:
+                                value_for_list = is_arrived(
+                                    current_data_lat_lon, sites_lat_lon)  # return just index position.
+                                # caution point :-site_id = sites_details[value_for_list]
+                                # be sure to verify
+                                print(
+                                    f'site_id = {sites_details[value_for_list]}')
+                                user_attendence_log, created = TblAttendanceLog2.objects.get_or_create(
+                                    user_id=request.user, site_id=sites_details[value_for_list], date=data["fld_date"], visit_id=data["visit_id"], start_latitude=data["fld_latitude"], start_longitude=data["fld_longitude"], end_latitude=data["fld_latitude"], end_longitude=data["fld_longitude"], start_time=data["fld_time"], end_time=data["fld_time"])
+
+                                print("from else")
+
+                        else:
+                            response_text_file(
+                                user=user, value=serializer.errors)
+                            # print(serializer.errors)
+                            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
                     else:
                         response_text_file(
                             user=user, value={
@@ -295,16 +332,6 @@ class UserTblAttendanceView(APIView):
                         # print(serializer.errors)
                         return Response({
                             "status": "error", 'message': messages.get("check_in_first")}, status=status.HTTP_400_BAD_REQUEST)
-
-                serializer = TblAttendanceSerializer(
-                    data=data)
-                if serializer.is_valid():
-                    serializer.save()
-                    continue
-                else:
-                    response_text_file(user=user, value=serializer.errors)
-                    # print(serializer.errors)
-                    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
             else:
                 response_text_file(user=user, value={

@@ -18,8 +18,11 @@ def parent_dir():
     return os.getcwd()
 
 
-def request_text_file(user=None, value=None):
-    file_path = f'{parent_dir()}/logFiles/request/{date_now()}.txt'
+def request_text_file(user=None, value=None, dir=None):
+    if dir:
+        file_path = f'{parent_dir()}/logFiles/request/{dir}/{date_now()}.txt'
+    else:
+        file_path = f'{parent_dir()}/logFiles/request/{date_now()}.txt'
     # print(f'file_path == {file_path}')
     try:
         with open(file_path, "a") as f:
@@ -35,8 +38,13 @@ def request_text_file(user=None, value=None):
         print("The 'docs' directory does not exist")
 
 
-def response_text_file(user=None, value=None):
-    file_path = f'{parent_dir()}/logFiles/response/{date_now()}.txt'
+def response_text_file(user=None, value=None, dir=None):
+    if dir:
+        file_path = f'{parent_dir()}/logFiles/response/{dir}/{date_now()}.txt'
+    else:
+        file_path = f'{parent_dir()}/logFiles/response/{date_now()}.txt'
+
+    # file_path = f'{parent_dir()}/logFiles/response/{date_now()}.txt'
     # print(f'file_path == {file_path}')
     try:
         with open(file_path, "a") as f:

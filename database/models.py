@@ -183,8 +183,11 @@ class TblUserSites(models.Model):
 
 class TblUserReimbursements(models.Model):
     REIMBURSEMENTS_STATUS_CHOICE = (
-        ('completed', 'completed'),
+        ('approved', 'approved'),
         ('pending', 'pending'),
+        ("requested", "requested"),
+        ("closed", "closed")
+
     )
     id = models.AutoField(primary_key=True, db_column="fld_ai_id")
     user_id = models.ForeignKey(
@@ -238,40 +241,6 @@ class TblAttendanceLog(models.Model):
 
     class Meta:
         db_table = 'tbl_attendance_log'
-
-
-class TblUserReimbursements2(models.Model):
-
-    REIMBURSEMENTS_STATUS_CHOICE = (
-        ('approved', 'approved'),
-        ('pending', 'pending'),
-        ("requested", "requested"),
-        ("closed", "closed")
-
-    )
-    id = models.AutoField(primary_key=True, db_column="fld_ai_id")
-    user_id = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True, blank=True, db_column="fld_user_id")
-    claim_id = models.CharField(
-        max_length=100, blank=True, null=True, db_column="fld_claim_id")
-    visit_id = models.CharField(
-        max_length=50, blank=True, null=True, db_column="fld_visit_id")
-    distance = models.IntegerField(
-        blank=True, null=True, db_column="fld_distance")
-    amount = models.IntegerField(
-        blank=True, null=True, db_column="fld_amount")
-    status = models.CharField(
-        max_length=20, blank=True, null=True, choices=REIMBURSEMENTS_STATUS_CHOICE, default="pending", db_column="fld_status")
-    is_active = models.BooleanField(
-        default=True, db_column="fld_is_active")
-    is_delete = models.BooleanField(
-        default=False, db_column="fld_is_delete")
-    date = models.DateField(blank=True, null=True, db_column="fld_date")
-    created_datetime = models.DateTimeField(
-        blank=True, null=True, db_column="fld_created_datetime")
-
-    class Meta:
-        db_table = 'tbl_user_reimbursements_update'
 
 
 class TblAttendanceLog2(models.Model):
