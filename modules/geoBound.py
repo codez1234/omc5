@@ -19,7 +19,7 @@ def check_current_lat_lon(current, destination):
 
     (lat_c, lon_c) = current
     (lat_d, lon_d) = destination
-    site = Point(float(lat_d), float(lon_d)).buffer(0.0002)
+    site = Point(float(lat_d), float(lon_d)).buffer(0.005)
     user_position = Point(float(lat_c), float(lon_c))
     value = site.contains(user_position)  # returns True
     return value
@@ -39,6 +39,8 @@ def is_arrived(current, sites_list):
     return values
 
 
+# print(check_current_lat_lon(current=(22.504, 88.300),
+#       destination=(22.500, 88.300)))
 # v = is_arrived(current=(10, 10), sites_list=[(22.611111, 88.411111),
 #                (22.6112, 88.4112), (22.601439, 88.415494)])
 
