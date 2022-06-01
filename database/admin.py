@@ -88,19 +88,19 @@ class TblAttendanceAdmin(admin.ModelAdmin):
     # list_filter = ['status', 'is_ordered']
 
 
-class TblAttendanceLogAdmin(admin.ModelAdmin):
-    list_display = ["id", "user_id", "site_name",
-                    "distance", "check_in_time", "check_out_time", "visit_id"]
+class TblAttendanceLogAdmin2(admin.ModelAdmin):
+    list_display = ["id", "user_id", "site_id",
+                    "visit_id", "start_latitude", "start_longitude", "visit_id", "end_latitude", "end_longitude", "start_time", "end_time", "date"]
     search_fields = ["user_id__id",
-                     "user_id__email", "visit_id"]
+                     "user_id__email", "visit_id", "site_id__fld_ai_id", "site_id__fld_site_omc_id", "site_id__fld_site_name"]
     # list_filter = ['status', 'is_ordered']
 
 
-admin.site.register(TblAttendanceLog, TblAttendanceLogAdmin)
+admin.site.register(TblAttendanceLog2, TblAttendanceLogAdmin2)
 admin.site.register(TblAttendance, TblAttendanceAdmin)
 admin.site.register(TblRates)
 admin.site.register(TblSites)
 admin.site.register(TblUserDevices)
 admin.site.register(TblUserLevel)
 admin.site.register(TblUserSites)
-admin.site.register(TblUserReimbursements)
+admin.site.register(TblUserReimbursements2)

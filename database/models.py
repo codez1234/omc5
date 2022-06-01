@@ -120,6 +120,9 @@ class TblSites(models.Model):
     fld_created_datetime = models.DateTimeField(
         auto_now_add=True)
 
+    def __str__(self) -> str:
+        return self.fld_site_name
+
     class Meta:
         managed = True
         db_table = 'tbl_sites'
