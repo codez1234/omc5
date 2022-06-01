@@ -45,7 +45,8 @@ class UserLoginView(APIView):
 
     def post(self, request, format=None):
         # https://www.valentinog.com/blog/drf-request/#:~:text=Surprise!-,request.,object%20and%20modify%20the%20copy.
-        request_text_file(user=request.user.id, value=request.data)
+        request_text_file(user=request.user.id,
+                          value=request.data, dir="UserLoginView")
         email_or_phone = request.data.get("email_or_phone")
         password = request.data.get('password')
         email = ""
@@ -84,7 +85,7 @@ class UserLoginView(APIView):
             if obj is not None:
                 token = get_tokens_for_user(user)
                 response_text_file(user=user.id, value={"status": "success", 'message': messages.get(
-                    "login_success"), "data": token})
+                    "login_success"), "data": token}, dir="UserLoginView")
                 return Response({"status": "success", 'message': messages.get("login_success"), "data": token}, status=status.HTTP_200_OK)
             response_text_file(user=user.id, value={
                                "status": "error", 'message': messages.get("device_information_error")})
