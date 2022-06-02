@@ -263,9 +263,14 @@ class UserTblAttendanceView(APIView):
                         user_id=request.user, date=data["fld_date"], visit_id=data["visit_id"])
                     distance_calculated = total_distance(
                         [previous_data_lat_lon, current_data_lat_lon])
-                    # previous_distance = user_reimbursement.distance
-                    # user_reimbursement.distance = previous_distance + distance_calculated
-                    user_reimbursement.distance += distance_calculated
+                    print(current_data_lat_lon, previous_data_lat_lon)
+                    print(
+                        f'for {request.user.email} distance_calculated is {distance_calculated}')
+                    previous_distance = user_reimbursement.distance
+                    user_reimbursement.distance = previous_distance + distance_calculated
+                    print(f'previous_distance == {previous_distance}')
+                    print(
+                        f'user_reimbursement.distance == {user_reimbursement.distance}')
                     user_reimbursement.save()
                     if is_arrived(current_data_lat_lon, sites_lat_lon) is not None:
                         value_for_list = is_arrived(
