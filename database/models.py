@@ -196,7 +196,9 @@ class TblUserReimbursements(models.Model):
         max_length=100, blank=True, null=True, db_column="fld_claim_id")
     visit_id = models.CharField(
         max_length=50, blank=True, null=True, db_column="fld_visit_id")
-    distance = models.IntegerField(
+    # distance = models.IntegerField(
+    #     blank=True, null=True, db_column="fld_distance")
+    distance = models.FloatField(
         blank=True, null=True, db_column="fld_distance")
     amount = models.IntegerField(
         blank=True, null=True, db_column="fld_amount")

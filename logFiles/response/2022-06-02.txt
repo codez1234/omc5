@@ -1,0 +1,100 @@
+
+2022-06-02 12:00:53.392788
+user id is 2
+{'status': 'error', 'message': 'please check in first'}
+
+2022-06-02 12:01:02.796081
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:11.255536
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:14.537228
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:15.347915
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:52.764010
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:54.020238
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:54.978800
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:55.731108
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:56.497299
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:01:57.378961
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:02:29.161798
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:02:30.008440
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:02:30.788015
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:02:31.415608
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:02:44.872444
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:02:45.659884
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:02:46.405337
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:02:47.113173
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 12:03:25.718131
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 13:02:47.568814
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 13:06:44.710944
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 13:07:56.341983
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 13:10:55.767763
+user id is 2
+{'status': 'success', 'message': ''}
+
+2022-06-02 13:15:10.236322
+user id is 2
+{'status': 'success', 'message': ''}
