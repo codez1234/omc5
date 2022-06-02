@@ -3,7 +3,7 @@ from wsgiref import validate
 from wsgiref.validate import validator
 from rest_framework import serializers
 from account.models import User
-from database.models import TblAttendance, TblUserSites, TblSites, TblUserReimbursements, TblAttendanceLog
+from database.models import TblAttendance, TblAttendanceLog2, TblUserSites, TblSites, TblUserReimbursements, TblAttendanceLog
 from django.utils.encoding import smart_str, force_bytes, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
@@ -120,6 +120,6 @@ class UserReimbursementsSerializer(serializers.ModelSerializer):
 
 class TblAttendanceLogSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TblAttendanceLog
+        model = TblAttendanceLog2
         fields = "__all__"
         # exclude = ("id", 'user_id', "is_active", "is_delete")
