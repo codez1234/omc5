@@ -12,3 +12,4 @@ attendanceData.txt
 attendanceView.py
 play
 note.txt
+__pycache__
