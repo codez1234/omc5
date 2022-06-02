@@ -1,4 +1,0 @@
-
-2022-06-01 23:36:13.715050
-user id is None
-{'email_or_phone': 'skmd@gmail.com', 'password': 'Skmd@9055', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '2'}
