@@ -67,11 +67,27 @@ class LogEntryAdmin(admin.ModelAdmin):
 # admin.site.register(Audittrail)
 # admin.site.register(Subscriptions)
 # admin.site.register(TblAdmin)
-admin.site.register(TblAttendance)
+class TblAttendanceAdmin(admin.ModelAdmin):
+    list_display = ["fld_ai_id", "fld_user_id", "fld_latitude",
+                    "fld_longitude", "fld_date", "fld_time"]
+    search_fields = ["fld_user_id__id",
+                     "fld_user_id__email", "fld_date", "fld_time"]
+    # list_filter = ['status', 'is_ordered']
+
+
+class TblAttendanceLogAdmin(admin.ModelAdmin):
+    list_display = ["id", "user_id", "site_name",
+                    "distance", "check_in_time", "check_out_time", "visit_id"]
+    search_fields = ["user_id__id",
+                     "user_id__email", "visit_id"]
+    # list_filter = ['status', 'is_ordered']
+
+
+admin.site.register(TblAttendanceLog, TblAttendanceLogAdmin)
+admin.site.register(TblAttendance, TblAttendanceAdmin)
 admin.site.register(TblRates)
 admin.site.register(TblSites)
 admin.site.register(TblUserDevices)
 admin.site.register(TblUserLevel)
 admin.site.register(TblUserSites)
 admin.site.register(TblUserReimbursements)
-admin.site.register(TblAttendanceLog)

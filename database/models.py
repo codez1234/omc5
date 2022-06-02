@@ -72,7 +72,8 @@ class TblAttendance(models.Model):
     fld_device_info = models.CharField(max_length=100, blank=True, null=True)
     # GenericIPAddressField is used for storing Pv4 or IPv6 address, in string format, so it is basically a CharField with validation of IP Address. "models.GenericIPAddressField()"
     # fld_ip_address = models.CharField(max_length=100, blank=True, null=True)
-    fld_ip_address = models.GenericIPAddressField(blank=True, null=True)
+    # fld_ip_address = models.GenericIPAddressField(blank=True, null=True)
+    fld_ip_address = models.CharField(max_length=100, blank=True, null=True)
     visit_id = models.CharField(
         max_length=50, blank=True, null=True, db_column="fld_visit_id")
     fld_is_active = models.BooleanField(default=True)

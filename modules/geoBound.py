@@ -19,7 +19,7 @@ def check_current_lat_lon(current, destination):
 
     (lat_c, lon_c) = current
     (lat_d, lon_d) = destination
-    site = Point(float(lat_d), float(lon_d)).buffer(0.0002)
+    site = Point(float(lat_d), float(lon_d)).buffer(0.005)
     user_position = Point(float(lat_c), float(lon_c))
     value = site.contains(user_position)  # returns True
     return value
