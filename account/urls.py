@@ -12,4 +12,7 @@ urlpatterns = [
     path('usersites', UserSitesView.as_view(), name='usersites'),
     path('reimbursements', UserReimbursementsView.as_view(), name='reimbursements'),
     path('attendancelog', AttendanceLogView.as_view(), name='attendancelog'),
+    path('claimreimbursements', ClaimReimbusmentsView.as_view(),
+         name='claimreimbursements'),
+
 ]

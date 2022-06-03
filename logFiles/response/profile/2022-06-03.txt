@@ -1,0 +1,4 @@
+
+2022-06-03 13:10:41.605545
+user id is 2
+{'status': 'success', 'message': 'user data', 'data': {'email': 'skmd@gmail.com', 'mobile': '8434939102', 'first_name': 'shubham', 'last_name': 'kumar', 'address': 'rahamgang', 'check_in_time': '10:00:00', 'check_out_time': '18:00:00', 'last_login': None, 'created_datetime': '2022-05-27T10:40:20'}}

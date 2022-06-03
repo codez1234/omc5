@@ -1,0 +1,4 @@
+
+2022-06-03 13:18:17.602619
+user id is 2
+{'status': 'success', 'message': 'user sites', 'data': {'fld_sites': [OrderedDict([('fld_site_omc_id', 'OMC1'), ('fld_site_type', 'AB1'), ('fld_site_name', 'My Home'), ('fld_state', 'uttar pradesh'), ('fld_district', 'dbg'), ('fld_latitude', '50'), ('fld_longitude', '50')]), OrderedDict([('fld_site_omc_id', 'OMC2'), ('fld_site_type', 'AB1'), ('fld_site_name', 'SKMD'), ('fld_state', 'bihar'), ('fld_district', 'dbg'), ('fld_latitude', '20'), ('fld_longitude', '20')])], 'fld_assigned_date': '2022-06-02T18:32:47'}}

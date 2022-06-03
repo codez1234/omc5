@@ -45,20 +45,21 @@ class UserLoginView(APIView):
 
     def post(self, request, format=None):
         # https://www.valentinog.com/blog/drf-request/#:~:text=Surprise!-,request.,object%20and%20modify%20the%20copy.
+        dir = "login"
         request_text_file(user=request.user.id,
-                          value=request.data, dir="login")
+                          value=request.data, dir=dir)
         email_or_phone = request.data.get("email_or_phone")
         password = request.data.get('password')
         email = ""
         print(request.data)
         if validate_ip_address(request.data.get('ip_address')) is None:
             response_text_file(
-                value={"status": "error", 'message': messages.get("ip_error")})
+                value={"status": "error", 'message': messages.get("ip_error")}, dir=dir)
             return Response({"status": "error", 'message': messages.get("ip_error")}, status=status.HTTP_400_BAD_REQUEST)
 
         if isValidIMEI(int(request.data.get('imei_number'))) is False:
             response_text_file(
-                value={"status": "error", 'message': messages.get("IMEI_error")})
+                value={"status": "error", 'message': messages.get("IMEI_error")}, dir=dir)
             return Response({"status": "error", 'message': messages.get("IMEI_error")}, status=status.HTTP_400_BAD_REQUEST)
 
         if "@" in email_or_phone:
@@ -85,14 +86,14 @@ class UserLoginView(APIView):
             if obj is not None:
                 token = get_tokens_for_user(user)
                 response_text_file(user=user.id, value={"status": "success", 'message': messages.get(
-                    "login_success"), "data": token}, dir="login")
+                    "login_success"), "data": token}, dir=dir)
                 return Response({"status": "success", 'message': messages.get("login_success"), "data": token}, status=status.HTTP_200_OK)
             response_text_file(user=user.id, value={
-                               "status": "error", 'message': messages.get("device_information_error")})
+                               "status": "error", 'message': messages.get("device_information_error")}, dir=dir)
             return Response({"status": "error", 'message': messages.get("device_information_error")}, status=status.HTTP_404_NOT_FOUND)
         else:
             response_text_file(value={"status": "error", 'message': messages.get(
-                "wrong_email_or_phone_and_password")})
+                "wrong_email_or_phone_and_password")}, dir=dir)
             return Response({"status": "error", 'message': messages.get("wrong_email_or_phone_and_password")}, status=status.HTTP_404_NOT_FOUND)
 
 
@@ -101,11 +102,12 @@ class UserProfileView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, format=None):
+        dir = "profile"
         print(request.user.id)
-        request_text_file(user=request.user.id, value=request.data)
+        request_text_file(user=request.user.id, value=request.data, dir=dir)
         serializer = UserProfileSerializer(request.user)
         response_text_file(user=request.user.id, value={
-                           "status": "success", 'message': "user data", "data": serializer.data})
+                           "status": "success", 'message': "user data", "data": serializer.data}, dir=dir)
         return Response({"status": "success", 'message': "user data", "data": serializer.data}, status=status.HTTP_200_OK)
 
 
@@ -114,18 +116,19 @@ class UserChangePasswordView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request, format=None):
-        request_text_file(user=request.user.id, value=request.data)
+        dir = "changepassword"
+        request_text_file(user=request.user.id, value=request.data, dir=dir)
         password = request.data.get('password')
         password2 = request.data.get('password2')
 
         if validate_ip_address(request.data.get('ip_address')) is None:
             response_text_file(
-                value={"status": "error", 'message': messages.get("ip_error")})
+                value={"status": "error", 'message': messages.get("ip_error")}, dir=dir)
             return Response({"status": "error", 'message': messages.get("ip_error")}, status=status.HTTP_400_BAD_REQUEST)
 
         if isValidIMEI(int(request.data.get('imei_number'))) is False:
             response_text_file(
-                value={"status": "error", 'message': messages.get("IMEI_error")})
+                value={"status": "error", 'message': messages.get("IMEI_error")}, dir=dir)
             return Response({"status": "error", 'message': messages.get("IMEI_error")}, status=status.HTTP_400_BAD_REQUEST)
 
         obj = check_device(request.user.id, request.data.get(
@@ -135,10 +138,10 @@ class UserChangePasswordView(APIView):
             serializer = UserChangePasswordSerializer(
                 data={"password": password, "password2": password2}, context={'user': request.user})
             serializer.is_valid(raise_exception=True)
-            response_text_file(user=request.user.id,
+            response_text_file(dir=dir, user=request.user.id,
                                value={"status": "success", 'message': messages.get("password_changed")})
             return Response({"status": "success", 'message': messages.get("password_changed")}, status=status.HTTP_200_OK)
-        response_text_file(user=request.user.id, value={
+        response_text_file(dir=dir, user=request.user.id, value={
             "status": "error", 'message': messages.get("device_information_error")})
         return Response({"status": "error", 'message': messages.get("device_information_error")}, status=status.HTTP_404_NOT_FOUND)
 
@@ -148,13 +151,16 @@ class UserSitesView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, format=None):
+        dir = "siteplan"
         id = request.user.id
-        request_text_file(user=id, value=request.data)
+        request_text_file(dir=dir, user=id, value=request.data)
         # may cause error if "sites" doesnot exists.
+        # print("000000000000000000000000000000000000000000000000000")
         sites = get_object_or_404(TblUserSites, fld_user_id=id)
+        # print("000000000000000000000000000000000000000000000000000")
         # print(id)
         serializer = TblUserSitesSerializer(sites)
-        response_text_file(user=id, value={
+        response_text_file(dir=dir, user=id, value={
                            "status": "success", 'message': "user sites", "data": serializer.data})
         return Response({"status": "success", 'message': "user sites", "data": serializer.data}, status=status.HTTP_200_OK)
 
@@ -163,11 +169,15 @@ class AttendanceLogView(APIView):
     renderer_classes = [UserRenderer]
     permission_classes = [IsAuthenticated]
 
-    def get(self, request, format=None):
-        request_text_file(user=request.user.id, value=request.data)
+    def post(self, request, format=None):
+        dir = "attendance_log"
+        request_text_file(dir=dir, user=request.user.id, value=request.data)
         # "visit_id": "OMCVISIT_2022-06-01_2"
         user = request.user
-        date = request.data.get("date")
+        try:
+            date = request.data.get("date")
+        except:
+            date = date_now()
         visit_id = f'OMCVISIT_{date}_{user.id}'
         # try:
         #     obj = TblAttendanceLog.objects.get(
@@ -177,7 +187,7 @@ class AttendanceLogView(APIView):
         obj = TblAttendanceLog2.objects.filter(
             user_id=user, date=date)
         serializer = TblAttendanceLogSerializer(obj, many=True)
-        response_text_file(user=request.user.id, value={
+        response_text_file(dir=dir, user=request.user.id, value={
                            "status": "success", 'message': "user data", 'visit_id': visit_id, "data": serializer.data})
         return Response({"status": "success", 'message': "user data", 'visit_id': visit_id, "data": serializer.data}, status=status.HTTP_200_OK)
 
@@ -187,10 +197,11 @@ class UserTblAttendanceView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request, format=None):
+        dir = "attendance"
         # print(f'request.headers == {request.headers}')
         user = request.user.id
         values = request.data.get('attendence')
-        request_text_file(user=user, value=values)
+        request_text_file(dir=dir, user=user, value=values)
 
         try:
             sites = TblUserSites.objects.filter(
@@ -198,9 +209,9 @@ class UserTblAttendanceView(APIView):
         except:
             # sites = None
             # print(request.headers)
-            response_text_file(
-                user=user, value={
-                    "status": "error", 'message': messages.get("site_not_assined_yet")})
+            response_text_file(dir=dir,
+                               user=user, value={
+                                   "status": "error", 'message': messages.get("site_not_assined_yet")})
             return Response({
                             "status": "error", 'message': messages.get("site_not_assined_yet")}, status=status.HTTP_404_NOT_FOUND)
         sites_lat_lon = []
@@ -216,13 +227,13 @@ class UserTblAttendanceView(APIView):
         for value in values:
             ip_address = value.get('ip_address')
             if validate_ip_address(ip_address) is None:
-                response_text_file(
-                    user=user, value={"status": "error", 'message': messages.get("ip_error")})
+                response_text_file(dir=dir,
+                                   user=user, value={"status": "error", 'message': messages.get("ip_error")})
                 return Response({"status": "error", 'message': messages.get("ip_error")}, status=status.HTTP_400_BAD_REQUEST)
 
             if isValidIMEI(int(value.get('imei_number'))) is False:
-                response_text_file(
-                    user=user, value={"status": "error", 'message': messages.get("IMEI_error")})
+                response_text_file(dir=dir,
+                                   user=user, value={"status": "error", 'message': messages.get("IMEI_error")})
                 return Response({"status": "error", 'message': messages.get("IMEI_error")}, status=status.HTTP_400_BAD_REQUEST)
 
             obj = check_device(user, value.get(
@@ -259,7 +270,8 @@ class UserTblAttendanceView(APIView):
                     if serializer.is_valid():
                         serializer.save()
                     else:
-                        response_text_file(user=user, value=serializer.errors)
+                        response_text_file(
+                            dir=dir, user=user, value=serializer.errors)
                         # print(serializer.errors)
                         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -330,25 +342,25 @@ class UserTblAttendanceView(APIView):
                                 print("from else")
 
                         else:
-                            response_text_file(
-                                user=user, value=serializer.errors)
+                            response_text_file(dir=dir,
+                                               user=user, value=serializer.errors)
                             # print(serializer.errors)
                             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
                     else:
-                        response_text_file(
-                            user=user, value={
-                                "status": "error", 'message': messages.get("check_in_first")})
+                        response_text_file(dir=dir,
+                                           user=user, value={
+                                               "status": "error", 'message': messages.get("check_in_first")})
                         # print(serializer.errors)
                         return Response({
                             "status": "error", 'message': messages.get("check_in_first")}, status=status.HTTP_400_BAD_REQUEST)
 
             else:
-                response_text_file(user=user, value={
+                response_text_file(dir=dir, user=user, value={
                     "status": "error", 'message': messages.get("device_information_error")})
                 return Response({"status": "error", 'message': messages.get("device_information_error")}, status=status.HTTP_404_NOT_FOUND)
 
-        response_text_file(user=user, value={
+        response_text_file(dir=dir, user=user, value={
             "status": "success", 'message': messages.get("data_created")})
         return Response({"status": "success", 'message': messages.get("data_created")}, status=status.HTTP_200_OK)
 
@@ -358,10 +370,45 @@ class UserReimbursementsView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, format=None):
-        request_text_file(user=request.user.id, value=request.data)
+        dir = "reimbursements"
+        request_text_file(dir=dir, user=request.user.id, value=request.data)
         query_set = TblUserReimbursements.objects.filter(
             user_id=request.user, date__gte=datetime.now()-timedelta(days=7))
         serializer = UserReimbursementsSerializer(query_set, many=True)
-        response_text_file(user=request.user.id, value={
+        response_text_file(dir=dir, user=request.user.id, value={
             "status": "success", 'message': serializer.data})
         return Response({"status": "success", 'message': serializer.data}, status=status.HTTP_200_OK)
+
+
+class ClaimReimbusmentsView(APIView):
+    renderer_classes = [UserRenderer]
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, format=None):
+        dir = "claim_reimbursements"
+        request_text_file(dir=dir, user=request.user.id, value=request.data)
+        # "visit_id": "OMCVISIT_2022-06-01_2"
+        user = request.user
+        visit_id = request.data.get("visit_id")
+        # reimbursement = get_object_or_404(
+        #     TblUserReimbursements, user_id=user, visit_id=visit_id)
+        try:
+            reimbursement = TblUserReimbursements.objects.get(
+                user_id=user, visit_id=visit_id)
+        except:
+            response_text_file(dir=dir, user=request.user.id, value={
+                               "status": "error", 'message': "please use valid visit id"})
+            return Response({"status": "error", 'message': "please use valid visit id"}, status=status.HTTP_404_NOT_FOUND)
+        if reimbursement.status == "pending":
+            reimbursement.status = "requested"
+            reimbursement.save()
+            response_text_file(dir=dir, user=request.user.id, value={
+                               "status": "success", 'message': "requested"})
+            return Response({"status": "success", 'message': "requested"}, status=status.HTTP_200_OK)
+        response_text_file(dir=dir, user=request.user.id, value={
+                           "status": "success", 'message': "Already requested"})
+        return Response({"status": "success", 'message': "Already requested"}, status=status.HTTP_200_OK)
+
+        # response_text_file(user=request.user.id, value={
+        #                    "status": "success", 'message': "user data", 'visit_id': visit_id, "data": serializer.data})
+        # return Response({"status": "success", 'message': "user data", 'visit_id': visit_id, "data": serializer.data}, status=status.HTTP_200_OK)

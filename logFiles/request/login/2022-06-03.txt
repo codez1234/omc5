@@ -1,0 +1,8 @@
+
+2022-06-03 10:26:00.709236
+user id is None
+{'email_or_phone': 'ak@g.com', 'password': 'Skmd@9055', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '2'}
+
+2022-06-03 13:10:36.019668
+user id is None
+{'email_or_phone': 'skmd@gmail.com', 'password': 'Skmd@9055', 'device_model': 'vivo s1', 'imei_number': '863720043315679', 'ip_address': '2'}

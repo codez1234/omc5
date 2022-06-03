@@ -96,6 +96,14 @@ class TblAttendanceLogAdmin2(admin.ModelAdmin):
     # list_filter = ['status', 'is_ordered']
 
 
+class TblUserReimbursementsAdmin(admin.ModelAdmin):
+    list_display = ["id", "user_id", "distance",
+                    "visit_id", "status"]
+    search_fields = ["id", "user_id__email", "distance",
+                     "visit_id", "status", "user_id__id"]
+
+
+admin.site.register(TblUserReimbursements, TblUserReimbursementsAdmin)
 admin.site.register(TblAttendanceLog2, TblAttendanceLogAdmin2)
 admin.site.register(TblAttendance, TblAttendanceAdmin)
 admin.site.register(TblRates)
@@ -103,4 +111,3 @@ admin.site.register(TblSites)
 admin.site.register(TblUserDevices)
 admin.site.register(TblUserLevel)
 admin.site.register(TblUserSites)
-admin.site.register(TblUserReimbursements)

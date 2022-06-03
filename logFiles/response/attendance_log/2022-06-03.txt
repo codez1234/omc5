@@ -1,0 +1,4 @@
+
+2022-06-03 13:18:32.493901
+user id is 2
+{'status': 'success', 'message': 'user data', 'visit_id': 'OMCVISIT_2022-06-1_2', 'data': [OrderedDict([('visit_id', 'OMCVISIT_2022-06-01_2'), ('start_latitude', 50.0), ('start_longitude', 50.0), ('end_latitude', 50.0), ('end_longitude', 50.0), ('start_time', '10:20:00'), ('end_time', '12:20:00'), ('date', '2022-06-01'), ('site_id', 7)]), OrderedDict([('visit_id', 'OMCVISIT_2022-06-01_2'), ('start_latitude', 20.0), ('start_longitude', 20.0), ('end_latitude', 20.0), ('end_longitude', 20.0), ('start_time', '10:20:00'), ('end_time', '12:20:00'), ('date', '2022-06-01'), ('site_id', 8)])]}
