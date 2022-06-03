@@ -121,5 +121,6 @@ class UserReimbursementsSerializer(serializers.ModelSerializer):
 class TblAttendanceLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = TblAttendanceLog2
-        fields = "__all__"
-        # exclude = ("id", 'user_id', "is_active", "is_delete")
+        # fields = "__all__"
+        exclude = ("id", 'user_id', "is_active",
+                   "is_delete", "created_datetime")

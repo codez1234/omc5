@@ -165,17 +165,21 @@ class AttendanceLogView(APIView):
 
     def get(self, request, format=None):
         request_text_file(user=request.user.id, value=request.data)
+        # "visit_id": "OMCVISIT_2022-06-01_2"
+        user = request.user
+        date = request.data.get("date")
+        visit_id = f'OMCVISIT_{date}_{user.id}'
         # try:
         #     obj = TblAttendanceLog.objects.get(
         #         user_id=request.user, date=date_now())
         # except:
         #     obj = None
         obj = TblAttendanceLog2.objects.filter(
-            user_id=request.user, date=request.data.get("date"))
+            user_id=user, date=date)
         serializer = TblAttendanceLogSerializer(obj, many=True)
         response_text_file(user=request.user.id, value={
-                           "status": "success", 'message': "user data", "data": serializer.data})
-        return Response({"status": "success", 'message': "user data", "data": serializer.data}, status=status.HTTP_200_OK)
+                           "status": "success", 'message': "user data", 'visit_id': visit_id, "data": serializer.data})
+        return Response({"status": "success", 'message': "user data", 'visit_id': visit_id, "data": serializer.data}, status=status.HTTP_200_OK)
 
 
 class UserTblAttendanceView(APIView):

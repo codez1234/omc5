@@ -98,3 +98,47 @@ user id is 2
 2022-06-02 13:15:10.132938
 user id is 2
 [{'attendance_status': 'current', 'latitude': '5', 'longitude': '5', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '10:20', 'date': '2022-06-01'}, {'attendance_status': 'current', 'latitude': '5', 'longitude': '5', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '12:20', 'date': '2022-06-01'}, {'attendance_status': 'current', 'latitude': '20', 'longitude': '20', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '10:20', 'date': '2022-06-01'}, {'attendance_status': 'current', 'latitude': '20', 'longitude': '20', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '12:20', 'date': '2022-06-01'}]
+
+2022-06-02 15:25:25.850810
+user id is 2
+[{'attendance_status': 'current', 'latitude': '5', 'longitude': '5', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '10:20', 'date': '2022-06-01'}, {'attendance_status': 'current', 'latitude': '5', 'longitude': '5', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '12:20', 'date': '2022-06-01'}, {'attendance_status': 'current', 'latitude': '20', 'longitude': '20', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '10:20', 'date': '2022-06-01'}, {'attendance_status': 'current', 'latitude': '20', 'longitude': '20', 'device_model': 'vivo s1', 'imei_number': '545454', 'ip_address': '122.163.76.5', 'time': '12:20', 'date': '2022-06-01'}]
+
+2022-06-02 15:26:03.401489
+user id is 2
+{}
+
+2022-06-02 15:26:31.877708
+user id is 2
+{}
+
+2022-06-02 15:26:52.421118
+user id is 2
+{}
+
+2022-06-02 15:27:01.046615
+user id is 2
+{'date': '2022-06-1'}
+
+2022-06-02 15:32:05.266767
+user id is 2
+{'date': '2022-06-2'}
+
+2022-06-02 15:32:11.396452
+user id is 2
+{'date': '2022-06-1'}
+
+2022-06-02 15:35:09.178151
+user id is 2
+{'date': '2022-06-1'}
+
+2022-06-02 15:35:40.608857
+user id is 2
+{'date': '2022-06-1'}
+
+2022-06-02 15:38:21.360090
+user id is 2
+{'date': '2022-06-1'}
+
+2022-06-02 16:38:03.048753
+user id is 2
+{'date': '2022-06-1'}
